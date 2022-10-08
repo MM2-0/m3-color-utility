@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500;800&family=Poppins:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Round');
+body {
+    margin: 0;
+}
+
+:root {
+    font-family: 'Poppins';
+}
+
+code {
+    font-family: 'Roboto Mono';
+    line-height: 1.25em;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    margin: 24px 0 12px;
+}
+
+.surface {
+    background-color: var(--surface);
+    transition: all 200ms;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    border-radius: 8px;
+    padding: 1rem;
+    color: var(--on-surface);
+    &::before {
+        content: '';
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        background-color: var(--primary);
+        z-index: -1;
+        opacity: 0.075;
+    }
+}
