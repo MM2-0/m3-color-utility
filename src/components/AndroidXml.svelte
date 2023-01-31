@@ -23,6 +23,7 @@
     <item name="colorErrorContainer">${colorScheme.errorContainer}</item>
     <item name="colorOnErrorContainer">${colorScheme.onErrorContainer}</item>
     <item name="colorOutline">${colorScheme.outline}</item>
+    <item name="colorOutlineVariant">${colorScheme.outlineVariant}</item>
     <item name="android:colorBackground">${colorScheme.background}</item>
     <item name="colorOnBackground">${colorScheme.onBackground}</item>
     <item name="colorSurface">${colorScheme.surface}</item>
@@ -31,6 +32,7 @@
     <item name="colorOnSurfaceVariant">${colorScheme.onSurfaceVariant}</item>
     <item name="colorSurfaceInverse">${colorScheme.inverseSurface}</item>
     <item name="colorOnSurfaceInverse">${colorScheme.inverseOnSurface}</item>
+    <item name="scrimBackground">${colorScheme.scrim}</item>
     `
 </script>
 

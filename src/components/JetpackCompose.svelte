@@ -33,6 +33,8 @@
     errorContainer = ${toComposeColor(colorScheme.errorContainer)},
     onErrorContainer = ${toComposeColor(colorScheme.onErrorContainer)},
     outline = ${toComposeColor(colorScheme.outline)},
+    outlineVariant = ${toComposeColor(colorScheme.outlineVariant)},
+    scrim = ${toComposeColor(colorScheme.scrim)},
 )`
 
     function toComposeColor(color: string): string {

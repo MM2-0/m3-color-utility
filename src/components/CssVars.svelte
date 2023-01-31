@@ -24,6 +24,7 @@
     --color-container: ${colorScheme.errorContainer};
     --color-on-error-container: ${colorScheme.onErrorContainer};
     --color-outline: ${colorScheme.outline};
+    --color-outline-variant: ${colorScheme.outlineVariant};
     --color-background: ${colorScheme.background};
     --color-on-background: ${colorScheme.onBackground};
     --color-surface: ${colorScheme.surface};
@@ -32,6 +33,7 @@
     --color-on-surface-variant: ${colorScheme.onSurfaceVariant};
     --color-inverse-surface: ${colorScheme.inverseSurface};
     --color-inverse-on-surface: ${colorScheme.inverseOnSurface};
+    --color-scrim: ${colorScheme.scrim};
 }
     `
 </script>

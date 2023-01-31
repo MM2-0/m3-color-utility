@@ -1,4 +1,4 @@
-import { HCT, Scheme } from '@material/material-color-utilities'
+import { Hct, Scheme } from '@material/material-color-utilities'
 
 export interface BaseColors {
     primary: string
@@ -45,6 +45,7 @@ export interface ColorScheme {
     surfaceVariant: string
     onSurfaceVariant: string
     outline: string
+    outlineVariant: string
     error: string
     onError: string
     errorContainer: string
@@ -52,6 +53,7 @@ export interface ColorScheme {
     inverseSurface: string
     inverseOnSurface: string
     inversePrimary: string
+    scrim: string
 }
 
 function generateTones(color: string): ColorTones {
@@ -73,7 +75,7 @@ function generateTones(color: string): ColorTones {
 }
 
 function generateTone(color: string, lightness: number): string {
-    const clr = HCT.fromInt(parseInt('FF' + color.substring(1), 16))
+    const clr = Hct.fromInt(parseInt('FF' + color.substring(1), 16))
     clr.tone = lightness
     return argbToHex(clr.toInt())
 }
@@ -110,9 +112,11 @@ export function generateLightColorScheme(baseColors: BaseColors): ColorScheme {
         onErrorContainer: error[10],
         onBackground: neutral[10],
         outline: neutralVariant[50],
+        outlineVariant: neutralVariant[80],
         inverseSurface: neutral[20],
         inverseOnSurface: neutral[95],
         inversePrimary: primary[80],
+        scrim: neutral[0],
     }
 }
 
@@ -148,9 +152,11 @@ export function generateDarkColorScheme(baseColors: BaseColors): ColorScheme {
         onErrorContainer: error[80],
         onBackground: neutral[90],
         outline: neutralVariant[60],
+        outlineVariant: neutralVariant[30],
         inverseSurface: neutral[90],
         inverseOnSurface: neutral[20],
         inversePrimary: primary[40],
+        scrim: neutral[0],
     }
 }
 

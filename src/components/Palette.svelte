@@ -102,8 +102,12 @@
             color={colorScheme.onSurfaceVariant}
             textColor={colorScheme.surfaceVariant}
         />
-        <PaletteColor name="Outline" color={colorScheme.outline} textColor="white" />
-        <div />
+        <PaletteColor name="Outline" color={colorScheme.outline} textColor={colorScheme.surface} />
+        <PaletteColor
+            name="OutlineVariant"
+            color={colorScheme.outlineVariant}
+            textColor={colorScheme.onSurface}
+        />
 
         <PaletteColor name="Error" color={colorScheme.error} textColor={colorScheme.onError} />
         <PaletteColor name="OnError" color={colorScheme.onError} textColor={colorScheme.error} />
@@ -117,6 +121,24 @@
             color={colorScheme.onErrorContainer}
             textColor={colorScheme.errorContainer}
         />
+
+        <PaletteColor
+            name="InverseSurface"
+            color={colorScheme.inverseSurface}
+            textColor={colorScheme.inverseOnSurface}
+        />
+        <PaletteColor
+            name="InverseOnSurface"
+            color={colorScheme.inverseOnSurface}
+            textColor={colorScheme.inverseSurface}
+        />
+
+        <PaletteColor
+            name="InversePrimary"
+            color={colorScheme.inversePrimary}
+            textColor={colorScheme.inverseSurface}
+        />
+        <PaletteColor name="Scrim" color={colorScheme.scrim} textColor="white" />
     </div>
 </section>
 
