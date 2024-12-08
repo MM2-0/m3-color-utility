@@ -50,7 +50,7 @@
         input[type='text'] {
             appearance: none;
             border: none;
-            background-color: var(--surface-variant);
+            background-color: var(--surface-container-highest);
             color: var(--on-surface-variant);
             padding: 0.5rem 1rem;
             border-top-left-radius: 4px;

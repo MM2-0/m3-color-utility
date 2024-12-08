@@ -20,11 +20,15 @@
     onTertiary = ${toComposeColor(colorScheme.onTertiary)},
     tertiaryContainer = ${toComposeColor(colorScheme.tertiaryContainer)},
     onTertiaryContainer = ${toComposeColor(colorScheme.onTertiaryContainer)},
-    background = ${toComposeColor(colorScheme.background)},
-    onBackground = ${toComposeColor(colorScheme.onBackground)},
     surface = ${toComposeColor(colorScheme.surface)},
+    surfaceBright = ${toComposeColor(colorScheme.surfaceBright)},
+    surfaceDim = ${toComposeColor(colorScheme.surfaceDim)}, 
+    surfaceContainer = ${toComposeColor(colorScheme.surfaceContainer)},
+    surfaceContainerHighest = ${toComposeColor(colorScheme.surfaceContainerHighest)},
+    surfaceContainerHigh = ${toComposeColor(colorScheme.surfaceContainerHigh)},
+    surfaceContainerLow = ${toComposeColor(colorScheme.surfaceContainerLow)},
+    surfaceContainerLowest = ${toComposeColor(colorScheme.surfaceContainerLowest)},
     onSurface = ${toComposeColor(colorScheme.onSurface)},
-    surfaceVariant = ${toComposeColor(colorScheme.surfaceVariant)},
     onSurfaceVariant = ${toComposeColor(colorScheme.onSurfaceVariant)},
     inverseSurface = ${toComposeColor(colorScheme.inverseSurface)},
     inverseOnSurface = ${toComposeColor(colorScheme.inverseOnSurface)},
@@ -35,6 +39,11 @@
     outline = ${toComposeColor(colorScheme.outline)},
     outlineVariant = ${toComposeColor(colorScheme.outlineVariant)},
     scrim = ${toComposeColor(colorScheme.scrim)},
+    
+    /* deprecated */
+    background = ${toComposeColor(colorScheme.background)},
+    onBackground = ${toComposeColor(colorScheme.onBackground)},
+    surfaceVariant = ${toComposeColor(colorScheme.surfaceVariant)},
 )`
 
     function toComposeColor(color: string): string {
@@ -58,6 +67,9 @@
         :global(.hljs-number) {
             font-weight: 800;
             color: var(--tertiary);
+        }
+        :global(.hljs-comment) {
+            color: var(--outline);
         }
     }
 </style>

@@ -31,8 +31,6 @@
 </script>
 
 <main
-    style:--background={colorScheme.background}
-    style:--on-background={colorScheme.onBackground}
     style:--primary={colorScheme.primary}
     style:--on-primary={colorScheme.onPrimary}
     style:--primary-container={colorScheme.primaryContainer}
@@ -45,11 +43,17 @@
     style:--on-tertiary={colorScheme.onTertiary}
     style:--surface={colorScheme.surface}
     style:--on-surface={colorScheme.onSurface}
-    style:--surface-variant={colorScheme.surfaceVariant}
     style:--on-surface-variant={colorScheme.onSurfaceVariant}
     style:--outline={colorScheme.outline}
     style:--error={colorScheme.error}
     style:--on-error={colorScheme.onError}
+    style:--outline-variant={colorScheme.outlineVariant}
+    style:--surface-container-highest={colorScheme.surfaceContainerHighest}
+    style:--surface-container-high={colorScheme.surfaceContainerHigh}
+    style:--surface-container={colorScheme.surfaceContainer}
+    style:--surface-container-low={colorScheme.surfaceContainerLow}
+    style:--surface-container-lowest={colorScheme.surfaceContainerLowest}
+    style:--surface-dim={colorScheme.surfaceDim}
 >
     <div class="container">
         <h1>
@@ -70,8 +74,8 @@
     main {
         display: flex;
         flex-direction: column;
-        background-color: var(--background);
-        color: var(--on-background);
+        background-color: var(--surface-container);
+        color: var(--on-surface);
     }
     .container {
         margin: 1rem auto;

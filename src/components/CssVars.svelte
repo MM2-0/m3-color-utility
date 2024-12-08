@@ -25,15 +25,24 @@
     --color-on-error-container: ${colorScheme.onErrorContainer};
     --color-outline: ${colorScheme.outline};
     --color-outline-variant: ${colorScheme.outlineVariant};
-    --color-background: ${colorScheme.background};
-    --color-on-background: ${colorScheme.onBackground};
     --color-surface: ${colorScheme.surface};
+    --color-surface-bright: ${colorScheme.surfaceBright};
+    --color-surface-dim: ${colorScheme.surfaceDim};
+    --color-surface-container: ${colorScheme.surfaceContainer};
+    --color-surface-container-highest: ${colorScheme.surfaceContainerHighest};
+    --color-surface-container-high: ${colorScheme.surfaceContainerHigh};
+    --color-surface-container-low: ${colorScheme.surfaceContainerLow};
+    --color-surface-container-lowest: ${colorScheme.surfaceContainerLowest};
     --color-on-surface: ${colorScheme.onSurface};
-    --color-surface-variant: ${colorScheme.surfaceVariant};
     --color-on-surface-variant: ${colorScheme.onSurfaceVariant};
     --color-inverse-surface: ${colorScheme.inverseSurface};
     --color-inverse-on-surface: ${colorScheme.inverseOnSurface};
     --color-scrim: ${colorScheme.scrim};
+
+    /* deprecated */
+    --color-background: ${colorScheme.background};
+    --color-on-background: ${colorScheme.onBackground};
+    --color-surface-variant: ${colorScheme.surfaceVariant};
 }
     `
 </script>
@@ -59,6 +68,9 @@
         :global(.hljs-selector-pseudo) {
             color: var(--primary);
             font-weight: 800;
+        }
+        :global(.hljs-comment) {
+            color: var(--outline);
         }
     }
 </style>
