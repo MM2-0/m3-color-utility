@@ -1,12 +1,19 @@
 <script lang="ts">
-    import type { ColorScheme } from '../lib/colors'
+	import type { ColorScheme } from '../lib/colors'
 
-    import hljs from 'highlight.js'
+	import hljs from 'highlight.js'
 
-    export let colorScheme: ColorScheme
-    export let isDark: boolean
+	interface Props {
+		colorScheme: ColorScheme
+		isDark: boolean
+	}
 
-    $: code = `${isDark ? 'darkColorScheme' : 'lightColorScheme'}(
+	let { colorScheme, isDark }: Props = $props()
+
+	function toComposeColor(color: string): string {
+		return `Color(0xFF${color.substring(1).toUpperCase()})`
+	}
+	let code = $derived(`${isDark ? 'darkColorScheme' : 'lightColorScheme'}(
     primary = ${toComposeColor(colorScheme.primary)},
     onPrimary = ${toComposeColor(colorScheme.onPrimary)},
     primaryContainer = ${toComposeColor(colorScheme.primaryContainer)},
@@ -44,32 +51,28 @@
     background = ${toComposeColor(colorScheme.background)},
     onBackground = ${toComposeColor(colorScheme.onBackground)},
     surfaceVariant = ${toComposeColor(colorScheme.surfaceVariant)},
-)`
-
-    function toComposeColor(color: string): string {
-        return `Color(0xFF${color.substring(1).toUpperCase()})`
-    }
+)`)
 </script>
 
 <section>
-    <h2>Jetpack Compose</h2>
-    <code class="surface">
-        {@html hljs.highlight(code, { language: 'kt' }).value}
-    </code>
+	<h2>Jetpack Compose</h2>
+	<code class="surface">
+		{@html hljs.highlight(code, { language: 'kt' }).value}
+	</code>
 </section>
 
 <style lang="scss">
-    code {
-        display: block;
-        white-space: pre-wrap;
-        margin: 2rem 0;
-        margin: 0;
-        :global(.hljs-number) {
-            font-weight: 800;
-            color: var(--tertiary);
-        }
-        :global(.hljs-comment) {
-            color: var(--outline);
-        }
-    }
+	code {
+		display: block;
+		white-space: pre-wrap;
+		margin: 2rem 0;
+		margin: 0;
+		:global(.hljs-number) {
+			font-weight: 800;
+			color: var(--tertiary);
+		}
+		:global(.hljs-comment) {
+			color: var(--outline);
+		}
+	}
 </style>

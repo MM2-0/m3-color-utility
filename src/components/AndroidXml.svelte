@@ -1,13 +1,16 @@
 <script lang="ts">
-    import type { ColorScheme } from '../lib/colors'
+	import type { ColorScheme } from '../lib/colors'
 
-    import hljs from 'highlight.js'
+	import hljs from 'highlight.js'
 
-    export let colorScheme: ColorScheme
+	interface Props {
+		colorScheme: ColorScheme
+	}
 
-    $: code =
-        '<' +
-        `style android:name="AppTheme" android:parent="Theme.AppCompat.DayNight.NoActionBar">
+	let { colorScheme }: Props = $props()
+
+	let code =
+		$derived(`\u003Cstyle android:name="AppTheme" android:parent="Theme.AppCompat.DayNight.NoActionBar">
     <item name="colorPrimary">${colorScheme.primary}</item>
     <item name="colorOnPrimary">${colorScheme.onPrimary}</item>
     <item name="colorPrimaryContainer">${colorScheme.primaryContainer}</item>
@@ -54,34 +57,34 @@
     <item name="android:colorBackground">${colorScheme.background}</item>
     <item name="colorOnBackground">${colorScheme.onBackground}</item>
     <item name="colorSurfaceVariant">${colorScheme.surfaceVariant}</item>
-</style>`
+</style>`)
 </script>
 
 <section>
-    <h2>Android XML</h2>
-    <code class="surface">
-        {@html hljs.highlight(code, { language: 'xml' }).value}
-    </code>
+	<h2>Android XML</h2>
+	<code class="surface">
+		{@html hljs.highlight(code, { language: 'xml' }).value}
+	</code>
 </section>
 
 <style lang="scss">
-    code {
-        display: block;
-        white-space: pre-wrap;
-        margin: 0;
-        :global(.hljs-name) {
-            font-weight: 800;
-            color: var(--primary);
-        }
-        :global(.hljs-attr) {
-            color: var(--secondary);
-        }
-        :global(.hljs-string) {
-            font-weight: 800;
-            color: var(--tertiary);
-        }
-        :global(.hljs-comment) {
-            color: var(--outline);
-        }
-    }
+	code {
+		display: block;
+		white-space: pre-wrap;
+		margin: 0;
+		:global(.hljs-name) {
+			font-weight: 800;
+			color: var(--primary);
+		}
+		:global(.hljs-attr) {
+			color: var(--secondary);
+		}
+		:global(.hljs-string) {
+			font-weight: 800;
+			color: var(--tertiary);
+		}
+		:global(.hljs-comment) {
+			color: var(--outline);
+		}
+	}
 </style>

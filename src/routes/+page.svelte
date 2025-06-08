@@ -10,10 +10,10 @@
     } from '../lib/colors'
     import JetpackCompose from '../components/JetpackCompose.svelte'
     import Settings from '../components/Settings.svelte'
-    import { browser } from '$app/env'
     import CssVars from '../components/CssVars.svelte'
     import Preview from '../components/Preview.svelte'
     import ModeToggle from '../components/ModeToggle.svelte'
+    import { browser } from '$app/environment'
 
     let darkTheme = browser ? matchMedia('(prefers-color-scheme: dark)').matches : false
 
